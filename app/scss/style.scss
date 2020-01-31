@@ -1,0 +1,40 @@
+$color: #f00;
+// ====================================
+$weihgt: 40px;
+$lenght: 300px;
+$turn: 60deg;
+// ====================================
+@mixin line {
+    position: absolute;
+    border: $weihgt solid $color;
+    border-radius: $weihgt;
+    width: $lenght;
+}
+
+.angle::before,
+.angle::after {
+    content: '';
+    @include line;
+    top: -$weihgt+-$lenght*.436;
+}
+
+.angle::before {
+    left: -$weihgt+-$lenght/4;
+    transform: rotate(-$turn);
+}
+
+.angle {
+    top: $lenght;
+    left: 100px;
+    @include line;
+    transition: all .5s;
+}
+
+.angle::after {
+    left: -$weihgt+$lenght/4;
+    transform: rotate($turn);
+}
+
+.angle:hover {
+    transform: rotate(60deg);
+}

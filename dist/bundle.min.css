@@ -1,0 +1,32 @@
+.angle::before,
+.angle::after {
+  content: '';
+  position: absolute;
+  border: 40px solid #f00;
+  border-radius: 40px;
+  width: 300px;
+  top: -170.8px; }
+
+.angle::before {
+  left: -115px;
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg); }
+
+.angle {
+  top: 300px;
+  left: 100px;
+  position: absolute;
+  border: 40px solid #f00;
+  border-radius: 40px;
+  width: 300px;
+  -webkit-transition: all .5s;
+  transition: all .5s; }
+
+.angle::after {
+  left: 35px;
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg); }
+
+.angle:hover {
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg); }
